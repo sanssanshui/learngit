@@ -1,0 +1,2 @@
+CREATE DATABASE nba_players
+    DEFAULT CHARACTER SET = 'utf8mb4';
