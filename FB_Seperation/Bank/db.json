@@ -1,0 +1,86 @@
+{
+  "account": {
+    "owner": "编程小白",
+    "balance": 32.31,
+    "transactions": [
+      {
+        "id": 1763653576952,
+        "type": "deposit",
+        "amount": 32,
+        "timestamp": "2025-11-20T15:46:16.952Z"
+      },
+      {
+        "id": 1755937259200,
+        "type": "deposit",
+        "amount": 0.0099999999,
+        "timestamp": "2025-08-23T08:20:59.200Z"
+      },
+      {
+        "id": 1755937249108,
+        "type": "deposit",
+        "amount": 0.001,
+        "timestamp": "2025-08-23T08:20:49.108Z"
+      },
+      {
+        "id": 1755937202588,
+        "type": "withdraw",
+        "amount": 15981,
+        "timestamp": "2025-08-23T08:20:02.588Z"
+      },
+      {
+        "id": 1755937184702,
+        "type": "deposit",
+        "amount": 2403,
+        "timestamp": "2025-08-23T08:19:44.702Z"
+      },
+      {
+        "id": 1752653281090,
+        "type": "withdraw",
+        "amount": 12.4,
+        "timestamp": "2025-07-16T08:08:01.090Z"
+      },
+      {
+        "id": 1752653273037,
+        "type": "withdraw",
+        "amount": 34.3,
+        "timestamp": "2025-07-16T08:07:53.037Z"
+      },
+      {
+        "id": 1752653242831,
+        "type": "withdraw",
+        "amount": 1500,
+        "timestamp": "2025-07-16T08:07:22.831Z"
+      },
+      {
+        "id": 1752653237251,
+        "type": "deposit",
+        "amount": 4024,
+        "timestamp": "2025-07-16T08:07:17.251Z"
+      },
+      {
+        "id": 1752653213914,
+        "type": "deposit",
+        "amount": 1000,
+        "timestamp": "2025-07-16T08:06:53.914Z"
+      },
+      {
+        "id": 1750725484175,
+        "type": "withdraw",
+        "amount": 799,
+        "timestamp": "2025-06-24T00:38:04.175Z"
+      },
+      {
+        "id": 1750725473601,
+        "type": "deposit",
+        "amount": 900,
+        "timestamp": "2025-06-24T00:37:53.601Z"
+      },
+      {
+        "id": 1,
+        "type": "deposit",
+        "amount": 1000,
+        "timestamp": "2025-01-01T12:00:00Z"
+      }
+    ]
+  }
+}
