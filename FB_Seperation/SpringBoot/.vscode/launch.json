@@ -1,0 +1,22 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "StudentManagementApplication",
+      "request": "launch",
+      "mainClass": "com.example.StudentManagementApplication",
+      "projectName": "student_management"
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-StudentManagementApplication<student_management>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.example.student_management.StudentManagementApplication",
+      "projectName": "student_management",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env",
+      "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=8281 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=student_management"
+    }
+  ]
+}

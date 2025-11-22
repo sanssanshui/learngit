@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>静态名言</title>
+    <style>
+      body {
+        text-align: center;
+        font-family: sans-serif;
+        margin-top: 5em;
+      }
+      #quote-display {
+        font-size: 1.5em;
+        margin: 2em;
+        height: 50px; /* 给一个固定高度防止页面跳动 */
+        color: #333;
+      }
+      button {
+        font-size: 1em;
+        padding: 10px 20px;
+        cursor: pointer;
+      }
+    </style>
+
+    <script>
+      // 等待整个 HTML 页面加载完毕后执行
+      document.addEventListener("DOMContentLoaded", () => {
+        const quoteDisplayElement = document.getElementById("quote-display");
+        const getQuoteButton = document.getElementById("get-quote-btn");
+
+        // --- 动态核心逻辑 ---
+        async function fetchAndDisplayQuote() {
+          // 步骤 1: JavaScript 向后端服务器发起“请求”
+          // 我们使用了 fetch API，这是现代浏览器内置的强大工具
+          // 注意地址和我们 server.js 中定义的 API 接口完全一致
+          const response = await fetch("http://localhost:3001/api/quote");
+
+          // 步骤 2: 等待并解析后端返回的 JSON 数据
+          const data = await response.json(); // data 将会是 { quote: "某句名言" } 的形式
+
+          // 步骤 3: 将获取到的动态数据，更新到 HTML 页面指定的位置
+          // 这是“动态页面”最直观的体现：只有 h2 标签里的内容变了！
+          quoteDisplayElement.textContent = data.quote;
+        }
+
+        // 将我们的核心函数绑定到按钮的点击事件上
+        getQuoteButton.addEventListener("click", fetchAndDisplayQuote);
+
+        // 可以在页面加载时就先获取一次
+        fetchAndDisplayQuote();
+      });
+    </script>
+
+    <script></script>
+  </head>
+  <body>
+    <h1>动态数据展示</h1>
+
+    <!-- 这里是动态数据的展示区域 -->
+    <h2 id="quote-display">点击按钮获取名言...</h2>
+
+    <!-- 这个按钮将触发动态更新 -->
+    <button id="get-quote-btn">获取新名言</button>
+  </body>
+</html>
